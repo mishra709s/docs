@@ -4,6 +4,8 @@ import StarterKit from '@tiptap/starter-kit'
 import Underline from '@tiptap/extension-underline'
 import Image from '@tiptap/extension-image'
 import FontFamily from '@tiptap/extension-font-family'
+import { Color } from '@tiptap/extension-color'
+import Highlight from '@tiptap/extension-highlight'
 import TextStyle from '@tiptap/extension-text-style'
 import ImageResize from 'tiptap-extension-resize-image'
 import TaskItem from '@tiptap/extension-task-item'
@@ -52,6 +54,8 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Highlight.configure({ multicolor: true }),
+      Color,
       FontFamily,
       TextStyle,
       Underline,
